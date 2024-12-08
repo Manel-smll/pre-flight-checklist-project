@@ -128,3 +128,114 @@ const ChecklistPage = ({ checklists, setChecklists }) => {
 
 export default ChecklistPage;
 
+// Styled-components pour la page
+const ChecklistPageContainer = styled.div`
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 600px; 
+`;
+
+const PageTitle = styled.h1`
+  font-size: 32px;
+  text-align: center;
+  color: #26547C; 
+  margin-bottom: 20px;
+`;
+
+const InformationSection = styled.div`
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 15px;
+  background-color: #ffffff;
+`;
+
+const Label = styled.span`
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+`;
+
+const StatusContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
+
+const StatusLabel = styled.span`
+  font-weight: bold;
+  color: ${(props) =>
+    props.status === 'completed'
+      ? '#26547C'
+      : props.status === 'in progress'
+      ? '#f4c542'
+      : '#ef476f'};
+`;
+
+const TaskList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+`;
+
+const TaskItem = styled.li`
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+const TaskTitle = styled.span`
+  font-weight: bold;
+  margin-right: 10px;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+  margin-top: 20px;
+`;
+
+const SaveButton = styled.button`
+  background-color: #ffd166;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px; 
+
+  &:hover {
+    background-color: #f4c542;
+  }
+`;
+
+const BackButton = styled.button`
+  background-color: #ef476f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px; 
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #d73757;
+  }
+`;
