@@ -134,3 +134,81 @@ const FormPage = ({ checklists, setChecklists }) => {
 };
 
 export default FormPage;
+
+const FormContainer = styled.div`
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+`;
+
+const TaskInputSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+`;
+
+const AddTaskButton = styled.button`
+  background-color: #ffd166; 
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none; 
+
+  &:hover {
+    background-color: #f4c542;
+  }
+`;
+
+const DeleteButton = styled.button`
+  background-color: #EF476F; 
+  color: black;  
+  padding: 6px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  border: none; 
+
+  &:hover {
+    background-color: #d9405e;
+  }
+`;
+
+const SaveButton = styled.button`
+  background-color: #ffd166; /* Jaune/or */
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;  /* Retirer la bordure par défaut */
+
+  &:hover {
+    background-color: #f4c542;
+  }
+`;
