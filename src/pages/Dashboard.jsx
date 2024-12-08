@@ -41,4 +41,27 @@ const Dashboard = ({ checklists, setChecklists }) => {
 
 export default Dashboard;
 
+const DashboardContainer = styled.div`
+  padding: 20px;
+`;
 
+const AddButton = styled.button`
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #ffd166;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f4c542;
+  }
+`;
+
+const ChecklistContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+`;
